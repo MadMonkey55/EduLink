@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.StudentMainController"
+            styleClass="app-bg" stylesheets="@../css/styles.css"
+            prefWidth="1100" prefHeight="720">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="header-bar" prefHeight="60">
+            <padding><Insets top="5" right="20" bottom="5" left="20"/></padding>
+            <ImageView fitHeight="42" preserveRatio="true">
+                <image><Image url="@../img/g2278.png"/></image>
+            </ImageView>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="welcomeLabel" text="Bienvenido" styleClass="header-title"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox styleClass="sidebar-light" prefWidth="210">
+            <Label text="Menu" styleClass="sidebar-light-title">
+                <padding><Insets top="4" left="16" bottom="14"/></padding>
+            </Label>
+            <Button fx:id="btnCourses" text="Courses" onAction="#showCourses" maxWidth="Infinity" styleClass="sidebar-light-btn-active"/>
+            <Button fx:id="btnLesson" text="Lesson" onAction="#showLesson" maxWidth="Infinity" styleClass="sidebar-light-btn"/>
+            <Button fx:id="btnTask" text="Task" onAction="#showTask" maxWidth="Infinity" styleClass="sidebar-light-btn"/>
+            <Button fx:id="btnGrades" text="My Grades" onAction="#showGrades" maxWidth="Infinity" styleClass="sidebar-light-btn"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button text="Cerrar sesión" onAction="#handleLogout" maxWidth="Infinity" styleClass="sidebar-light-btn">
+                <VBox.margin><Insets left="4" right="4"/></VBox.margin>
+            </Button>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="app-bg">
+            <padding><Insets top="24" right="30" bottom="24" left="30"/></padding>
+        </StackPane>
+    </center>
+</BorderPane>

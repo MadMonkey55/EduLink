@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.AdminMainController"
+            styleClass="app-bg" stylesheets="@../css/styles.css"
+            prefWidth="1200" prefHeight="760">
+
+    <left>
+        <VBox styleClass="sidebar" prefWidth="230">
+            <padding><Insets top="20" left="16" right="16" bottom="20"/></padding>
+            <HBox alignment="CENTER_LEFT" spacing="8">
+                <ImageView fitWidth="34" preserveRatio="true">
+                    <image><Image url="@../img/g2278.png"/></image>
+                </ImageView>
+                <VBox>
+                    <Label text="EduLink" styleClass="sidebar-title"/>
+                    <Label text="Management Portal" styleClass="sidebar-subtitle"/>
+                </VBox>
+            </HBox>
+
+            <VBox spacing="2">
+                <VBox.margin><Insets top="26"/></VBox.margin>
+                <Button fx:id="btnDashboard" text="Dashboard" onAction="#showDashboard" maxWidth="Infinity" styleClass="sidebar-btn-active"/>
+                <Button fx:id="btnAlumnos" text="Estudiantes" onAction="#showAlumnos" maxWidth="Infinity" styleClass="sidebar-btn"/>
+                <Button fx:id="btnMaestros" text="Profesores" onAction="#showMaestros" maxWidth="Infinity" styleClass="sidebar-btn"/>
+                <Button fx:id="btnCursos" text="Cursos" onAction="#showCursos" maxWidth="Infinity" styleClass="sidebar-btn"/>
+                <Button fx:id="btnInscripciones" text="Inscripciones" onAction="#showInscripciones" maxWidth="Infinity" styleClass="sidebar-btn"/>
+                <Button fx:id="btnReportes" text="Reportes" onAction="#showReportes" maxWidth="Infinity" styleClass="sidebar-btn"/>
+            </VBox>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Button text="Cerrar sesión" onAction="#handleLogout" maxWidth="Infinity" styleClass="sidebar-btn-exit"/>
+        </VBox>
+    </left>
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="header-bar" prefHeight="60">
+            <padding><Insets top="5" right="24" bottom="5" left="24"/></padding>
+            <Label fx:id="screenTitleLabel" text="System Overview" styleClass="header-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="welcomeLabel" text="Admin User" styleClass="muted-text"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="app-bg">
+            <StackPane fx:id="contentArea" styleClass="app-bg">
+                <padding><Insets top="24" right="30" bottom="30" left="30"/></padding>
+            </StackPane>
+        </ScrollPane>
+    </center>
+</BorderPane>

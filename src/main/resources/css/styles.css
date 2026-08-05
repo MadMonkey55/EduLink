@@ -1,0 +1,319 @@
+/* ==========================================================
+   EduLink English Academy - Estilos globales
+   Paleta: azul marino (#12294F / #1B3B6F), rojo acento (#C8102E),
+   fondo claro (#F2F4F7), tarjetas blancas.
+   ========================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -navy: #12294F;
+    -navy-light: #1B3B6F;
+    -red: #C8102E;
+    -bg: #F2F4F7;
+    -card: #FFFFFF;
+    -border: #E0E0E0;
+    -text-dark: #1A1C1C;
+    -text-muted: #6B7280;
+}
+
+/* ---------- Fondo general ---------- */
+.app-bg {
+    -fx-background-color: -bg;
+}
+
+/* ---------- Barra lateral ---------- */
+.sidebar {
+    -fx-background-color: -navy;
+    -fx-padding: 0 0 10 0;
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #B9C4D6;
+    -fx-font-size: 11px;
+}
+
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+}
+
+.sidebar-btn:hover {
+    -fx-background-color: -navy-light;
+}
+
+.sidebar-btn-active {
+    -fx-background-color: -red;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 0;
+}
+
+.sidebar-btn-exit {
+    -fx-background-color: transparent;
+    -fx-border-color: #7C8CA6;
+    -fx-border-width: 1;
+    -fx-text-fill: #E5E9F0;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER;
+    -fx-padding: 10 16 10 16;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-cursor: hand;
+}
+
+.sidebar-btn-exit:hover {
+    -fx-background-color: derive(-red, -10%);
+    -fx-border-color: -red;
+}
+
+/* ---------- Barra lateral clara (Alumno / Maestro) ---------- */
+.sidebar-light {
+    -fx-background-color: white;
+    -fx-border-color: transparent -border transparent transparent;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 10 0 10 0;
+}
+
+.sidebar-light-title {
+    -fx-text-fill: -text-dark;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-light-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-dark;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+}
+
+.sidebar-light-btn:hover {
+    -fx-background-color: #F5F6F8;
+}
+
+.sidebar-light-btn-active {
+    -fx-background-color: -red;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 0;
+}
+
+/* ---------- Header ---------- */
+.header-bar {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent -border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.header-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-dark;
+}
+
+/* ---------- Tarjetas ---------- */
+.card {
+    -fx-background-color: -card;
+    -fx-border-color: -border;
+    -fx-border-width: 1;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-padding: 18;
+}
+
+.stat-card-value {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -navy;
+}
+
+.stat-card-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: -text-muted;
+    -fx-font-weight: bold;
+}
+
+/* ---------- Titulos ---------- */
+.section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-dark;
+}
+
+.muted-text {
+    -fx-text-fill: -text-muted;
+}
+
+/* ---------- Botones ---------- */
+.btn-primary {
+    -fx-background-color: -navy;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 24 10 24;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: -navy-light;
+}
+
+.btn-danger {
+    -fx-background-color: -red;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 24 10 24;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: derive(-red, -15%);
+}
+
+.btn-secondary {
+    -fx-background-color: white;
+    -fx-border-color: -navy;
+    -fx-border-width: 1.5;
+    -fx-text-fill: -navy;
+    -fx-font-weight: bold;
+    -fx-padding: 9 22 9 22;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #EEF2F8;
+}
+
+/* ---------- Campos de texto ---------- */
+.text-field, .password-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: #F7F8FA;
+    -fx-border-color: -border;
+    -fx-border-width: 1;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-padding: 8;
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: -navy;
+}
+
+.field-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-dark;
+}
+
+/* ---------- Tablas ---------- */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: -border;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #F5F6F8;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: -text-dark;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FAFBFC;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #DCE6F5;
+}
+
+/* ---------- Login ---------- */
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 20, 0, 0, 4);
+}
+
+.login-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -navy;
+}
+
+.login-btn {
+    -fx-background-color: -navy;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12 0 12 0;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.login-btn:hover {
+    -fx-background-color: -navy-light;
+}
+
+.link-text {
+    -fx-text-fill: -navy;
+    -fx-font-weight: bold;
+    -fx-underline: false;
+    -fx-cursor: hand;
+}
+
+/* ---------- Badges de nivel ---------- */
+.badge {
+    -fx-background-color: #EEF2F8;
+    -fx-text-fill: -navy;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 10 3 10;
+    -fx-background-radius: 12;
+}
+
+.badge-red {
+    -fx-background-color: #FBE1E5;
+    -fx-text-fill: -red;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 10 3 10;
+    -fx-background-radius: 12;
+}
+
+/* ---------- Curso card (para vista de estudiante) ---------- */
+.course-card {
+    -fx-background-color: white;
+    -fx-border-color: -border;
+    -fx-border-width: 1;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 16;
+}
+
+.course-card:hover {
+    -fx-border-color: -navy;
+}
